@@ -67,7 +67,7 @@ export default function Player() {
     /**
      * Controls
      */
-    const { forward, backward, leftward, rightward, restart } = getKeys();
+    const { forward, backward, leftward, rightward, restartButton } = getKeys();
 
     const impulse = { x: 0, y: 0, z: 0 };
     const torque = { x: 0, y: 0, z: 0 };
@@ -75,7 +75,7 @@ export default function Player() {
     const impulseStrength = 0.6 * delta;
     const torqueStrength = 0.2 * delta;
 
-    if (restart) {
+    if (restartButton) {
       reset();
     }
 
